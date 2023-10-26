@@ -6,8 +6,13 @@ if (isset($_POST['submit'])) {
     $firstname = $project->post("firstname");
     $lastname = $project->post("lastname");
     $email = $project->post("email");
+    $phone = $project->post("phone");
+    $address = $project->post("address");
+    $stability = $project->post("stability");
+    $gender = $project->post("gender");
+    $dob = $project->post("dob");
     $card_num = $project->post("card_num");
-    if ($firstname=="" || $lastname=="" || $email=="" || $card_num=="") {
+    if ($firstname=="" || $lastname=="" || $email=="" || $phone=="" || $address=="" || $stability=="" || $gender=="" || $dob=="" || $card_num=="") {
         $error=1;
         $error_msg.="All fields are compulsary <br>";
     }else{
@@ -24,7 +29,7 @@ if (isset($_POST['submit'])) {
 
 if ($error==0) {
     $dater = time();
-    $project->db->query("INSERT INTO patients(firstname, lastname, email, card_num, date) VALUES('$firstname', '$lastname', '$email', '$card_num', '$dater')");
+    $project->db->query("INSERT INTO patients(firstname, lastname, email, phone, address, stability, gender, dob, card_num, date) VALUES('$firstname', '$lastname', '$email', '$phone', '$address', '$stability', '$gender', '$dob', '$card_num', '$dater')");
     $project->set_alert("success","Your Patient Was Successfully Registered");
     header("location:home.php");
 }else{

@@ -6,10 +6,15 @@ if(isset($_POST['submit'])){
     $fullname=$project->post("fullname");
     $email=$project->post("email");
     $phone=$project->post("phone");
+    $address = $project->post("address");
+    $stability = $project->post("stability");
+    $gender = $project->post("gender");
+    $dob = $project->post("dob");
+    $staff_id = $project->post("staff_id");
     $password=$project->post("password");
     $cpassword=$project->post("cpassword");
 
-    if($fullname=="" || $email=="" || $phone=="" || $password==""){
+    if($fullname=="" || $email=="" || $phone=="" || $address=="" || $stability=="" || $gender=="" || $dob=="" || $staff_id=="" || $password==""){
         $error=1;
         $error_msg.="All fields are compulsary <br>";
     }else{
@@ -33,7 +38,7 @@ if(isset($_POST['submit'])){
 }
 
 if($error==0){
-    $project->db->query("INSERT INTO users (fullname, phone, email,password) VALUES ('$fullname','$phone','$email','$password')");
+    $project->db->query("INSERT INTO users (fullname, phone, email , address, stability, gender, dob, $staff_id, password) VALUES ('$fullname','$phone','$email', '$address', '$stability', '$gender', '$dob', '$staff_id', '$password')");
     $project->set_alert("success", "your registration was successful please login");
    header("location:login.php");
 }else{

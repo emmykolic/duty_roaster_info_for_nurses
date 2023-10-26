@@ -17,7 +17,7 @@ if (isset($_GET['uid'])) {
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
-          <h2 class="text-center text-white"><?= ucwords($nurses['fullname']) ?></h2><span class="text-center text-white">Display Of Next Shift</span>
+          <h2 class="text-center text-dark"><?= ucwords($nurses['fullname']) ?></h2><span class="text-center text-dark" style="font-weight: bold;">Display Of Next Shift</span>
         </div>
       </div>
       <div class="row">

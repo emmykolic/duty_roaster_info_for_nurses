@@ -35,6 +35,44 @@
                   </div>
 
                   <div class="form-group">
+                      <label class="sr-only" for="address">Address</label>
+                      <input class="form-control" type="text" id="address" name="address" placeholder="Address*" required="required" data-validation-required-message="Please enter your address."/>
+                      <p class="help-block text-danger"></p>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="sr-only" for="stability">Stability</label>
+                      <select name="disability" id="disability" required="required" class="form-control" data-validation-required-message="Please enter your stability.">
+                        <option value="">Disability</option>
+                          <option value="Yes">Yes</option>
+                          <option value="No">No</option>
+                      </select>
+                      <p class="help-block text-danger"></p>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="sr-only" for="gender">Gender</label>
+                      <select class="form-control" id="gender" name="gender">
+                          <option value="">Gender</option>
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                      </select>
+                      <p class="help-block text-danger"></p>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="sr-only" for="dob">Date Of Birth</label>
+                      <input class="form-control" type="date" id="dob" name="dob" placeholder="date of birth*" required="required" data-validation-required-message="Please enter your dob."/>
+                      <p class="help-block text-danger"></p>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="sr-only" for="staff_id">Staff Number</label>
+                      <input class="form-control" type="text" id="staff_id" name="staff_id" placeholder="Staff Number*" required="required" data-validation-required-message="Please enter your staff_id."/>
+                      <p class="help-block text-danger"></p>
+                  </div>
+
+                  <div class="form-group">
                     <label class="sr-only" for="password">Password</label>
                     <input class="form-control" type="password" id="password" name="password" placeholder="Your password" required="required" data-validation-required-message="Please enter your password."/>
                     <p class="help-block text-danger"></p>

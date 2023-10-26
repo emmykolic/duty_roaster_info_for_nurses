@@ -6,9 +6,10 @@ $error_msg="";
 if(isset($_POST['submit'])){
     $uid=$project->uid;
     $entry_fullname=$project->post("entry_fullname");
+    $entry_email = $project->post("entry_email");
     $staff_id = $project->post("staff_id");
 
-    if($entry_fullname=="" || $staff_id==""){
+    if($entry_fullname=="" || $entry_email=="" || $staff_id==""){
         $error=1;
         $error_msg.="All fields are compulsary <br>";
     }
@@ -20,7 +21,7 @@ if(isset($_POST['submit'])){
 
 if($error==0){
     $dater = time();
-    $project->db->query("INSERT INTO roaster (entry_fullname, entry_date, staff_id, uid) VALUES ('$entry_fullname', '$dater', '$staff_id', '$uid')");
+    $project->db->query("INSERT INTO roaster (entry_fullname, email, entry_date, staff_id, uid) VALUES ('$entry_fullname', '$entry_email', '$dater', '$staff_id', '$uid')");
     $project->set_alert("success", "Your Attendance Was Successfully Submitted");
    header("location:home.php");
 }else{

@@ -3,7 +3,7 @@ include_once("config.php");
 $project->bouncer();
 include_once("header.php"); 
 ?>
-    <section class="odule mt-0 pb-0 background1">
+    <section class="module mt-0 pb-0 background1">
         <div class="container">
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2">

@@ -25,19 +25,57 @@ include("header.php");
                     <form role="form" method="post" action="add_patient_action.php">
                         <div class="form-group">
                             <label class="sr-only" for="name">First Name</label>
-                            <input class="form-control" type="text" id="name" name="firstname" placeholder="Your First Name*" required="required" data-validation-required-message="Please enter your firstname."/>
+                            <input class="form-control" type="text" id="name" name="firstname" placeholder="First Name*" required="required" data-validation-required-message="Please enter your firstname."/>
                             <p class="help-block text-danger"></p>
                         </div>
 
                         <div class="form-group">
                             <label class="sr-only" for="lastname">Last Name</label>
-                            <input class="form-control" type="text" id="name" name="lastname" placeholder="Your Last Name*" required="required" data-validation-required-message="Please enter your lastname."/>
+                            <input class="form-control" type="text" id="name" name="lastname" placeholder="Last Name*" required="required" data-validation-required-message="Please enter your lastname."/>
                             <p class="help-block text-danger"></p>
                         </div>
 
                         <div class="form-group">
                             <label class="sr-only" for="email">Email</label>
-                            <input class="form-control" type="email" id="email" name="email" placeholder="Your Email*" required="required" data-validation-required-message="Please enter your email address."/>
+                            <input class="form-control" type="email" id="email" name="email" placeholder="Email*" required="required" data-validation-required-message="Please enter your email address."/>
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="sr-only" for="Phone">Phone</label>
+                            <input class="form-control" type="text" id="phone" name="phone" placeholder="Phone Number*" required="required" data-validation-required-message="Please enter your phone number."/>
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="sr-only" for="address">Address</label>
+                            <input class="form-control" type="text" id="address" name="address" placeholder="Address*" required="required" data-validation-required-message="Please enter your address."/>
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="sr-only" for="stability">Stability</label>
+                            <select name="disability" id="disability" required="required" class="form-control" data-validation-required-message="Please enter your stability.">
+                                <option value="">Disability</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="sr-only" for="gender">Gender</label>
+                            <select class="form-control" id="gender" name="gender">
+                                <option value="">Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="sr-only" for="dob">Date Of Birth</label>
+                            <input class="form-control" type="date" id="dob" name="dob" placeholder="date of birth*" required="required" data-validation-required-message="Please enter your dob."/>
                             <p class="help-block text-danger"></p>
                         </div>
 

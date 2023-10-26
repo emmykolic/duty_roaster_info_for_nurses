@@ -13,7 +13,7 @@ $project->bouncer();
       </div>
     </div>
   </section>
-  <section class="module">
+  <section class="module" style="height: 50vh;">
     <div class="container">
       <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
@@ -22,6 +22,11 @@ $project->bouncer();
             <div class="form-group">
               <label class="sr-only" for="fullname">Enter Fullname</label>
               <input class="form-control" type="fullname" id="fullname" name="entry_fullname" placeholder="Your Fullname*" required="required" data-validation-required-message="Please enter your Attendance fullname." />
+              <p class="help-block text-danger"></p>
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="email">Enter Email</label>
+              <input class="form-control" type="email" id="email" name="entry_email" placeholder="Your email*" required="required" data-validation-required-message="Please enter your Attendance email." />
               <p class="help-block text-danger"></p>
             </div>
             <div class="form-group">
